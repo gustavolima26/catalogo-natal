@@ -2,12 +2,17 @@
 /* Fontes */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
 
 /* Configurações Gerais */
 
 :root {
     --fonte-destaque: "Bebas Neue", sans-serif;
     --fonte-principal: "Nunito", sans-serif;
+    --fonte-logo: "Style Script", cursive;
+    --fonte-logo-secundaria: "Atma", system-ui;
 
     --cor-logo-verde:#C2CFB4;
     --cor-logo-marrom:#BEB29F;
@@ -31,10 +36,44 @@ h1,h2,h3,h4,h5,h6 {
     font-family: var(--fonte-destaque);
 }
 
+/* Balão flutuante WhatsApp */
+
+.container_balloon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .balloon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: pulsar 2s infinite;
+    transition: opacity 1s ease-in-out;
+    transition: background-image 0.5s ease;
+    background: var(--cor-logo-verde) url(../imagens/botao-flutuante-wp.svg) no-repeat center center fixed;
+  }
+  
+  @keyframes pulsar {
+    0% {
+      transform: scale(0.9); /* Tamanho original */
+    }
+    50% {
+      transform: scale(1); /* Aumenta 10% no meio da animação */
+    }
+    100% {
+      transform: scale(0.9); /* Volta ao tamanho original */
+    }
+  }
+
 /* HEADER */
 
 header menu {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 120px;
     display: flex;
@@ -54,7 +93,7 @@ header nav a {
 
 header .background-header-container {
     background-color: rgba(0, 0, 0, 0.400);
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
     height: 100vh;
@@ -141,5 +180,67 @@ header .conteudo-header a {
 
 /* MENU */
 
+section {
+    width: 100%;
+    height: 500px;
+}
+
+#section-1 {
+    background-color: aqua;
+}
 
 /* FOOTER */
+
+footer {
+    height: auto;
+    background: var(--cor-logo-verde) url(../imagens/background-footer.png) no-repeat left center;
+    background-size: contain;
+    padding: 20px 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+footer div {
+    margin: 0px 80px;
+  }
+
+  footer h3 {
+    font-family: var(--fonte-logo);
+    text-align: center;
+    color: var(--cor-font-marrom);
+  }
+
+  footer #subtitulo {
+    font-family: var(--fonte-logo-secundaria);
+    text-align: center;
+    color: var(--cor-font-marrom);
+    margin-top: -15px;
+  }
+
+  footer p {
+    text-align: center;
+    color: var(--cor-font-marrom);
+  }
+
+  footer a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--cor-font-marrom);
+    cursor: pointer;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  footer i {
+    font-size: 24px;
+    padding: 5px 0px;
+    vertical-align: middle;
+  }
+
+  footer .fa-brands {
+    font-size: 28px;
+  }
