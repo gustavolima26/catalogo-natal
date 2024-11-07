@@ -53,9 +53,13 @@ h1,h2,h3,h4,h5,h6 {
     height: 100px;
     border-radius: 50%;
     animation: pulsar 2s infinite;
-    transition: opacity 1s ease-in-out;
-    transition: background-image 0.5s ease;
+    transition: background-color 0.5s ease;
     background: var(--cor-logo-verde) url(../imagens/botao-flutuante-wp.svg) no-repeat center center fixed;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.200);
+  }
+
+  .balloon:hover {
+    background-color: var(--cor-logo-marrom);
   }
   
   @keyframes pulsar {
@@ -84,15 +88,24 @@ header menu {
 }
 
 header nav a {
+    display: inline-block;
     text-decoration: none;
     margin: 0px 10px;
     padding: 10px 20px;
     color: white;
     font-weight: bold;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.350);
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transform: translate(-3px, -3px) !important;
+    transition: transform 0.2s ease-in-out;
 }
 
 header .background-header-container {
-    background-color: rgba(0, 0, 0, 0.400);
+    background-color: rgba(0, 0, 0, 0.450);
     position: relative;
     top: 0;
     width: 100%;
@@ -124,6 +137,17 @@ header .conteudo-header-container {
     align-items: center;
     flex-flow: row wrap;
     gap: 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 header .conteudo-header {
@@ -138,12 +162,14 @@ header .imagem-header {
     height: 500px;
     background-color: white;
     border-radius: 50px;
+    
 }
 
 header .imagem-header img {
     background-color: var(--cor-logo-verde);
     border-radius: 50px;
     border: 10px solid white;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.250);
 } 
 
 header #logo-header {
@@ -157,6 +183,7 @@ header h1 {
     font-size: 4em;
     max-width: 400px;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.350);
 }
 
 header p {
@@ -164,6 +191,7 @@ header p {
     font-size: 1.6em;
     max-width: 850px;
     margin-bottom: 40px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.350);
 }
 
 header .conteudo-header a {
@@ -176,6 +204,17 @@ header .conteudo-header a {
     background-color: var(--cor-logo-verde);
     color: var(--cor-font-marrom);
     border-radius: 25px;
+    transition: 0.5s ease;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.250);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.250);
+}
+
+header .conteudo-header a:hover {
+    background-color: var(--cor-logo-marrom);
+    color: white;
+    text-decoration: underline;
+    transform: translate(-5px, -5px);
+    
 }
 
 /* MENU */
