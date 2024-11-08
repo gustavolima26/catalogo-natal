@@ -112,7 +112,47 @@
     }
 }
 
-@media screen and (min-width: 656px) and (max-width:1370px) {
+@media screen and (max-width:1010px) {
+    .background-divs {
+        width: 350px !important;
+        height: 350px !important;
+    }
+
+    .section-1-conteudo,.section-2-conteudo, .section-3-conteudo, .section-5-conteudo, .section-7-conteudo {
+        gap: 0;
+    }
+
+    .section-1-conteudo > p,.section-2-conteudo > p, .section-3-conteudo > p, .section-5-conteudo > p, .section-7-conteudo > p {
+        padding: 20px 0px 10px 0px;
+        width: 350px;
+    }
+
+    .section-2-conteudo-filho {
+        width: 350px;
+    }
+
+    #section-3-img1, #section-3-img2, #section-3-img3 {
+        width: 300px !important;
+        height: 400px !important;
+    }
+
+    .section-5-container {
+        gap: 20px;
+    }
+
+    .section-4-container > #section-4-img {
+        margin-left: 50px;
+      }
+      
+      .section-4-conteudo {
+        width: 350px;
+        margin: 50px;
+        margin-top: -120px;
+        text-align: center;
+      }
+}
+
+@media screen and (min-width: 656px) and (max-width:1390px) {
 
     .balloon {
         width: 75px;

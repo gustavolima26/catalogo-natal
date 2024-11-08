@@ -31,8 +31,8 @@ p, a {
     line-height: 1.5em;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-size: 3em;
+h1,h2,h3,h4,h5,h6, #valor {
+    font-size: 4em;
     font-family: var(--fonte-destaque);
 }
 
@@ -166,7 +166,8 @@ header .imagem-header {
 }
 
 header .imagem-header img {
-    background-color: var(--cor-logo-verde);
+    background: white url(../imagens/background-divs.jpg) no-repeat center center;
+    background-size: cover;
     border-radius: 50px;
     border: 10px solid white;
     box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.250);
@@ -219,14 +220,330 @@ header .conteudo-header a:hover {
 
 /* MENU */
 
-section {
-    width: 100%;
-    height: 500px;
+main, body {
+  z-index: -1;
 }
 
-#section-1 {
-    background-color: aqua;
+section {
+    width: 100%;
+    height: auto;
 }
+
+section h2 {
+  text-align: center;
+  padding: 50px;
+}
+
+section p {
+  text-align: center;
+  padding: 50px;
+}
+
+#valor {
+  font-size: 4em;
+}
+
+.background-divs {
+  background: white url(../imagens/background-divs.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#section-1, #section-3, #section-5, #section-7 {
+  position: relative;
+  background: url(../imagens/background-section-1.jpg) no-repeat right center fixed;
+  background-size: cover;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#section-1::before, #section-3::before, #section-5::before, #section-7::before { 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.800);
+}
+
+#section-1,/* #section-3, #section-5, #section-7*/ * {
+  position: relative;
+}
+
+.section-1-container,.section-2-container, .section-3-container, .section-5-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0px 20px;
+  gap: 50px;
+}
+
+.section-1-container > div,.section-2-container > div, .section-5-container > div, .section-7-container > div {
+  width: 450px;
+  height: 450px;
+  border: 10px solid var(--cor-logo-marrom);
+}
+
+#section-1-img1 {
+  background: white url(../imagens/imagens-catalogo/bola-de-natal/img1.jpeg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-1-img2 {
+  background: white url(../imagens/imagens-catalogo/bola-de-natal/img2.jpeg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.section-1-conteudo,.section-2-conteudo, .section-3-conteudo, .section-7-conteudo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 50px;
+}
+
+.section-1-conteudo > p,.section-2-conteudo > p, .section-7-conteudo > p {
+  width: 450px;
+}
+
+.section-1-conteudo-filho, .section-7-conteudo-filho {
+  width: 450px;
+  padding-left: 60px;
+}
+
+.section-1-conteudo-filho p,.section-2-conteudo-filho p, .section-3-conteudo-filho p, .section-7-conteudo-filho p {
+  padding: 0;
+}
+
+.section-1-conteudo-neto,.section-2-conteudo-neto, .section-7-conteudo-neto {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#section-1-conteudo-neto,#section-2-conteudo-neto, #section-3-conteudo-neto, #section-7-conteudo-neto {
+  margin-top: -20px;
+}
+
+#section-2 {
+  position: relative;
+  background: url(../imagens/background-section-2.jpg) no-repeat right center fixed;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.400);
+}
+
+#section-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#section-2 h2 {
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.500);
+}
+
+#section-2 #valor {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-2 p {
+  font-weight: bold;
+}
+
+.section-2-conteudo-filho {
+  width: 450px;
+}
+
+#section-2-img1 {
+  background: white url(../imagens/imagens-catalogo/donuts/img1.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-2-img2 {
+  background: white url(../imagens/imagens-catalogo/donuts/img2.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.section-3-container > div {
+  width: 350px;
+  height: 500px;
+  border: 10px solid var(--cor-logo-marrom);
+}
+
+.section-3-conteudo > p {
+  width: 600px;
+}
+
+.section-3-conteudo-filho {
+  width: 450px;
+}
+
+#section-3-img1 {
+  background: white url(../imagens/imagens-catalogo/topo-de-bolo/img1.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-3-img2 {
+  background: white url(../imagens/imagens-catalogo/topo-de-bolo/img2.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-3-img3 {
+  background: white url(../imagens/imagens-catalogo/topo-de-bolo/img3.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.section-3-conteudo-neto {
+  justify-content: center;
+}
+
+#section-4 {
+  background: white url(../imagens/background-section-4.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+#section-4 p {
+  font-size: 1.5em;
+  padding: 0;
+  max-width: 450px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-4 h2 {
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.500);
+}
+
+#section-4 #valor {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+  font-size: 4em;
+}
+
+.section-4-container > #section-4-img {
+  width: 450px;
+  height: 450px;
+  border: 10px solid var(--cor-logo-marrom);
+  margin-left: 150px;
+  margin-bottom: 150px;
+}
+
+.section-4-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0px 20px;
+}
+
+.section-4-conteudo {
+  margin: 150px;
+  margin-top: -120px;
+}
+
+#section-4-img {
+  background: white url(../imagens/imagens-catalogo/tubo-lata/img.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+
+#section-5-img1 p, #section-5-img2 p, #section-5-img3 p, #section-5-img4 p, #section-7-img1 p, #section-7-img2 p, #section-7-img3 p, #section-7-img4 p, #section-7-img5 p {
+  width: 350px;
+  position: absolute;
+  top: 350px;
+  margin-left: -10px;
+  padding: 0;
+}
+
+#section-5-img1 #valor, #section-5-img2 #valor, #section-5-img3 #valor, #section-5-img4 #valor, #section-7-img1 #valor, #section-7-img2 #valor, #section-7-img3 #valor, #section-7-img4 #valor, #section-7-img5 #valor {
+  position: absolute;
+  top: 380px;
+  padding: 0;
+}
+
+#section-5-img1 {
+  background: white url(../imagens/imagens-catalogo/bis/img1.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-5-img2 {
+  background: white url(../imagens/imagens-catalogo/bis/img2.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-5-img3 {
+  background: white url(../imagens/imagens-catalogo/bis/img3.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-5-img4 {
+  background: white url(../imagens/imagens-catalogo/bis/img4.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+.section-5-container > div, .section-7-container > div {
+  width: 350px;
+  height: 350px;
+  border: 10px solid var(--cor-logo-marrom);
+}
+
+#section-7-img1 {
+  background: white url(../imagens/imagens-catalogo/Chocolates/img1.jpeg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-7-img2 {
+  background: white url(../imagens/imagens-catalogo/Chocolates/img2.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-7-img3 {
+  background: white url(../imagens/imagens-catalogo/Chocolates/img3.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-7-img4 {
+  background: white url(../imagens/imagens-catalogo/Chocolates/img4.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-7-img5 {
+  background: white url(../imagens/imagens-catalogo/Chocolates/img5.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.section-7-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0px 20px;
+  gap: 150px;
+  margin-bottom: 150px;
+}
+
 
 /* FOOTER */
 
