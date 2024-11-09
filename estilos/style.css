@@ -413,6 +413,7 @@ section p {
 #section-4 {
   background: white url(../imagens/background-section-4.jpg) no-repeat center center fixed;
   background-size: cover;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.400);
 }
 
 #section-4 p {
@@ -449,12 +450,12 @@ section p {
   justify-content: left;
   align-items: center;
   flex-flow: row wrap;
-  padding: 0px 20px;
+  gap: 100px;
 }
 
 .section-4-conteudo {
-  margin: 150px;
   margin-top: -120px;
+  padding: 0px 50px;
 }
 
 #section-4-img {
