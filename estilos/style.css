@@ -26,7 +26,9 @@
 }
 
 p, a {
-    font-size: 1.3em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.150);
     font-family: var(--fonte-principal);
     line-height: 1.5em;
 }
@@ -34,6 +36,7 @@ p, a {
 h1,h2,h3,h4,h5,h6, #valor {
     font-size: 4em;
     font-family: var(--fonte-destaque);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.150);
 }
 
 /* Balão flutuante WhatsApp */
@@ -91,16 +94,27 @@ header nav a {
     display: inline-block;
     text-decoration: none;
     margin: 0px 10px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     color: white;
+    font-size: 1.3em;
     font-weight: bold;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.350);
+}
+
+#contato {
+  padding: 15px 20px;
+  background-color: var(--cor-logo-verde);
+  border-radius: 50px;
+}
+
+#contato:hover {
+  transform: translate(0px, 0px) !important;
 }
 
 header nav a:hover {
     text-decoration: underline;
     cursor: pointer;
-    transform: translate(-3px, -3px) !important;
+    transform: translate(-3px, -3px);
     transition: transform 0.2s ease-in-out;
 }
 
@@ -195,7 +209,7 @@ header p {
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.350);
 }
 
-header .conteudo-header a {
+header .conteudo-header a, .whats {
     max-width: 400px;
     padding: 15px;
     font-size: 1.6em;
@@ -210,12 +224,24 @@ header .conteudo-header a {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.250);
 }
 
+.whats {
+  display: block;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 20px;
+}
+
+.whats:hover {
+  background-color: var(--cor-logo-marrom);
+  color: white;
+  text-decoration: underline;
+}
+
 header .conteudo-header a:hover {
     background-color: var(--cor-logo-marrom);
     color: white;
     text-decoration: underline;
-    transform: translate(-5px, -5px);
-    
+    transform: translate(-5px, -5px);  
 }
 
 /* MENU */
@@ -232,19 +258,17 @@ section {
 section h2 {
   text-align: center;
   padding: 50px;
+  color: var(--cor-font-marrom);
 }
 
 section p {
   text-align: center;
   padding: 50px;
-}
-
-#valor {
-  font-size: 4em;
+  color: var(--cor-font-marrom);
 }
 
 .background-divs {
-  background: white url(../imagens/background-divs.jpg) no-repeat center center;
+  background: white no-repeat center center;
   background-size: cover;
 }
 
@@ -252,6 +276,12 @@ section p {
   position: relative;
   background: url(../imagens/background-section-1.jpg) no-repeat right center fixed;
   background-size: cover;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#section-4, #section-6, #section-8, #section-9 {
+  position: relative;
   overflow: hidden;
   z-index: -1;
 }
@@ -266,11 +296,21 @@ section p {
   background-color: rgba(255, 255, 255, 0.800);
 }
 
+#section-2::before, #section-4::before, #section-6::before, #section-8::before, #section-9::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
 #section-1,/* #section-3, #section-5, #section-7*/ * {
   position: relative;
 }
 
-.section-1-container,.section-2-container, .section-3-container, .section-5-container {
+.section-1-container,.section-2-container, .section-3-container, .section-5-container,.section-6-container,.section-8-container, .section-9-container {
   width: 100%;
   height: auto;
   display: flex;
@@ -281,11 +321,12 @@ section p {
   gap: 50px;
 }
 
-.section-1-container > div,.section-2-container > div, .section-5-container > div, .section-7-container > div {
+.section-1-container > div,.section-2-container > div, .section-5-container > div,.section-6-container > div, .section-7-container > div,.section-8-container > div, .section-7-container > div {
   width: 450px;
   height: 450px;
   border: 10px solid var(--cor-logo-marrom);
 }
+
 
 #section-1-img1 {
   background: white url(../imagens/imagens-catalogo/bola-de-natal/img1.jpeg) no-repeat bottom center;
@@ -297,7 +338,7 @@ section p {
   background-size: cover;
 }
 
-.section-1-conteudo,.section-2-conteudo, .section-3-conteudo, .section-7-conteudo {
+.section-1-conteudo,.section-2-conteudo, .section-3-conteudo {
   width: 100%;
   height: auto;
   display: flex;
@@ -307,20 +348,20 @@ section p {
   gap: 50px;
 }
 
-.section-1-conteudo > p,.section-2-conteudo > p, .section-7-conteudo > p {
+.section-1-conteudo > p {
   width: 450px;
 }
 
-.section-1-conteudo-filho, .section-7-conteudo-filho {
+.section-1-conteudo-filho {
   width: 450px;
   padding-left: 60px;
 }
 
-.section-1-conteudo-filho p,.section-2-conteudo-filho p, .section-3-conteudo-filho p, .section-7-conteudo-filho p {
+.section-1-conteudo-filho p,.section-2-conteudo-filho p, .section-3-conteudo-filho p {
   padding: 0;
 }
 
-.section-1-conteudo-neto,.section-2-conteudo-neto, .section-7-conteudo-neto {
+.section-1-conteudo-neto,.section-2-conteudo-neto {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -328,7 +369,7 @@ section p {
   gap: 30px;
 }
 
-#section-1-conteudo-neto,#section-2-conteudo-neto, #section-3-conteudo-neto, #section-7-conteudo-neto {
+#section-1-conteudo-neto,#section-2-conteudo-neto, #section-3-conteudo-neto {
   margin-top: -20px;
 }
 
@@ -339,19 +380,9 @@ section p {
   box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.400);
 }
 
-#section-2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 #section-2 h2 {
   color: white;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.500);
+  text-shadow: 0px 0px 10px black;
 }
 
 #section-2 #valor {
@@ -359,8 +390,9 @@ section p {
   text-shadow: 0px 0px 10px black;
 }
 
-#section-2 p {
-  font-weight: bold;
+.section-2-conteudo > p {
+  color: white;
+  text-shadow: 0px 0px 10px black;
 }
 
 .section-2-conteudo-filho {
@@ -375,6 +407,15 @@ section p {
 #section-2-img2 {
   background: white url(../imagens/imagens-catalogo/donuts/img2.jpg) no-repeat bottom center;
   background-size: cover;
+}
+
+.section-2-container-whats {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+#section-2 .whats {
+  margin: auto;
 }
 
 .section-3-container > div {
@@ -417,7 +458,6 @@ section p {
 }
 
 #section-4 p {
-  font-size: 1.5em;
   padding: 0;
   max-width: 450px;
   color: white;
@@ -426,13 +466,12 @@ section p {
 
 #section-4 h2 {
   color: white;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.500);
+  text-shadow: 0px 0px 10px black;
 }
 
 #section-4 #valor {
   color: white;
   text-shadow: 0px 0px 10px black;
-  font-size: 4em;
 }
 
 .section-4-container > #section-4-img {
@@ -463,8 +502,7 @@ section p {
   background-size: cover;
 }
 
-
-#section-5-img1 p, #section-5-img2 p, #section-5-img3 p, #section-5-img4 p, #section-7-img1 p, #section-7-img2 p, #section-7-img3 p, #section-7-img4 p, #section-7-img5 p {
+#section-5-img1 p, #section-5-img2 p, #section-5-img3 p, #section-5-img4 p, #section-7-img1 p, #section-7-img2 p, #section-7-img3 p, #section-7-img4 p, #section-7-img5 p, #section-9-img1 p, #section-9-img2 p, #section-9-img3 p, #section-9-img4 p, #section-9-img5 p, #section-9-img6 p, #section-9-img7 p {
   width: 350px;
   position: absolute;
   top: 350px;
@@ -472,7 +510,7 @@ section p {
   padding: 0;
 }
 
-#section-5-img1 #valor, #section-5-img2 #valor, #section-5-img3 #valor, #section-5-img4 #valor, #section-7-img1 #valor, #section-7-img2 #valor, #section-7-img3 #valor, #section-7-img4 #valor, #section-7-img5 #valor {
+#section-5-img1 #valor, #section-5-img2 #valor, #section-5-img3 #valor, #section-5-img4 #valor, #section-7-img1 #valor, #section-7-img2 #valor, #section-7-img3 #valor, #section-7-img4 #valor, #section-7-img5 #valor, #section-9-img1 #valor, #section-9-img2 #valor, #section-9-img3 #valor, #section-9-img4 #valor, #section-9-img5 #valor, #section-9-img6 #valor, #section-9-img7 #valor {
   position: absolute;
   top: 380px;
   padding: 0;
@@ -502,14 +540,107 @@ section p {
   margin-bottom: 150px;
 }
 
-.section-5-container > div, .section-7-container > div {
+.section-5-container > div,.section-6-container > div, .section-7-container > div, .section-8-container > div, .section-9-container > div {
   width: 350px;
   height: 350px;
   border: 10px solid var(--cor-logo-marrom);
 }
 
+#section-6 {
+  background: white url(../imagens/background-section-5.jpg) no-repeat center center;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.400);
+}
+
+#section-6-img1 > div, #section-6-img3 p, #section-6-img4 p {
+  width: 350px;
+  position: absolute;
+  top: 350px;
+  margin-left: -10px;
+  padding: 0;
+}
+
+#section-6-img1 > div, #section-6-img3 #valor {
+  position: absolute;
+  top: 380px;
+  padding: 0;
+}
+
+#section-6-img4 #valor {
+  position: absolute;
+  top: 415px;
+  padding: 0;
+}
+
+#section-6-img1 > div p {
+  display: inline-block;
+  text-align: center;
+  line-height: 55px;
+  margin: auto;
+  padding-left: 5px;
+  font-size: 1.4em;
+}
+
+#section-6-img1 > div #valor {
+  font-size: 3em;
+}
+
+.section-6-conteiner-filho {
+  margin-top: -30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: end;
+}
+
+.section-6-conteiner-neto {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-6-img1 {
+  background: white url(../imagens/imagens-catalogo/caixa/img1.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-6-img3 {
+  background: white url(../imagens/imagens-catalogo/caixa/img3.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-6-img4 {
+  background: white url(../imagens/imagens-catalogo/caixa/img4.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-6 p {
+  padding: 0;
+  max-width: 450px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-6 h2 {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-6 #valor {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-6 .whats {
+  margin-top: 100px;
+}
+
 #section-7-img1 {
-  background: white url(../imagens/imagens-catalogo/Chocolates/img1.jpeg) no-repeat bottom center;
+  background: white url(../imagens/imagens-catalogo/Chocolates/img1.jpg) no-repeat bottom center;
   background-size: cover;
 }
 
@@ -533,6 +664,14 @@ section p {
   background-size: cover;
 }
 
+#section-7 p {
+  font-size: 1.4em;
+}
+
+#section-7 #valor {
+  font-size: 4em;
+}
+
 .section-7-container {
   width: auto;
   height: auto;
@@ -540,11 +679,182 @@ section p {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  padding: 0px 20px;
+  padding: 0px 65px;
   gap: 150px;
+  margin-bottom: 200px;
+}
+
+.section-8-container > .background-divs {
+  margin-bottom: 220px !important;
+}
+
+#section-8 {
+  background: white url(../imagens/background-section-2.jpg) no-repeat center center;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.400);
+}
+
+#section-8-img1 > div, #section-8-img2 p, #section-8-img3 p {
+  width: 350px;
+  position: absolute;
+  top: 350px;
+  margin-left: -10px;
+  padding: 0;
+}
+
+#section-8-img2 p, #section-8-img3 p {
+  font-size: 1.4em;
+}
+
+#section-8-img1 > div {
+  position: absolute;
+  top: 380px;
+  padding: 0;
+}
+
+#section-8-img2 #valor, #section-8-img3 #valor {
+  position: absolute;
+  top: 415px;
+  padding: 0;
+  font-size: 4em;
+}
+
+#section-8-img1 > div p {
+  display: inline-block;
+  text-align: center;
+  line-height: 55px;
+  margin: auto;
+  padding-left: 5px;
+}
+
+#section-8-img1 > div #valor {
+  font-size: 3em;
+}
+
+.section-8-conteiner-filho {
+  margin-top: -30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: end;
+}
+
+.section-8-conteiner-neto {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-8-img1 {
+  background: white url(../imagens/imagens-catalogo/kit/img3.jpg) no-repeat bottom center;
+  background-size: cover;
   margin-bottom: 150px;
 }
 
+#section-8-img2 {
+  background: white url(../imagens/imagens-catalogo/kit/img2.jpg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-8-img3 {
+  background: white url(../imagens/imagens-catalogo/kit/img1.jpeg) no-repeat bottom center;
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+#section-8 p {
+  padding: 0;
+  max-width: 450px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-8 h2 {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-8 #valor {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-8 .whats {
+  margin-top: 80px;
+}
+
+#section-9 {
+  background: white url(../imagens/background-section.jpg) no-repeat center center;
+  background-size: cover;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.400);
+}
+
+#section-9-img1 {
+  background: white url(../imagens/imagens-catalogo/mimos/img1.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-9-img2 {
+  background: white url(../imagens/imagens-catalogo/mimos/img2.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-9-img3 {
+  background: white url(../imagens/imagens-catalogo/mimos/img3.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-9-img4 {
+  background: white url(../imagens/imagens-catalogo/mimos/img4.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-9-img5 {
+  background: white url(../imagens/imagens-catalogo/mimos/img5.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-9-img6 {
+  background: white url(../imagens/imagens-catalogo/mimos/img.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+#section-9-img7 {
+  background: white url(../imagens/imagens-catalogo/mimos/img.jpg) no-repeat bottom center;
+  background-size: cover;
+}
+
+.section-9-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0px 65px;
+  gap: 150px;
+  margin-bottom: 200px;
+}
+
+#section-9 p {
+  padding: 0;
+  max-width: 450px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-9 h2 {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+#section-9 #valor {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+  font-size: 4em;
+}
 
 /* FOOTER */
 
@@ -557,6 +867,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    z-index: -1;
 }
 
 footer div {
@@ -565,6 +876,7 @@ footer div {
 
   footer h3 {
     font-family: var(--fonte-logo);
+    font-weight: 400;
     text-align: center;
     color: var(--cor-font-marrom);
   }

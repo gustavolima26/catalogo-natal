@@ -22,6 +22,14 @@
         background: var(--cor-logo-verde) url(../imagens/botao-flutuante-wp-mobile.svg) no-repeat center center fixed;
     }
 
+    p, a {
+        font-size: 1.4em;
+    }
+    
+    h1,h2,h3,h4,h5,h6, #valor {
+        font-size: 3.5em;
+    }
+
     header menu {
         display: none;
     }
@@ -51,8 +59,9 @@
         margin: 20px 0px;
     }
     
-    header .conteudo-header a {
+    header .conteudo-header a, .whats {
         font-size: 1.2em;
+        width: 300px;
     }
 
     header .imagem-header {
@@ -118,13 +127,17 @@
         height: 350px !important;
     }
 
-    .section-1-conteudo,.section-2-conteudo, .section-3-conteudo, .section-5-conteudo, .section-7-conteudo {
+    .section-1-conteudo,.section-2-conteudo, .section-3-conteudo, .section-5-conteudo {
         gap: 0;
     }
 
-    .section-1-conteudo > p,.section-2-conteudo > p, .section-3-conteudo > p, .section-5-conteudo > p, .section-7-conteudo > p {
+    .section-1-conteudo > p,.section-2-conteudo > p, .section-3-conteudo > p, .section-5-conteudo > p{
         padding: 20px 0px 10px 0px;
         width: 350px;
+    }
+
+    .section-1-conteudo-filho {
+        padding-left: 20px;
     }
 
     .section-2-conteudo-filho {
@@ -153,6 +166,15 @@
       .section-5-container {
         gap: 20px;
     }
+
+    #section-6 .whats {
+        margin-top: 50px;
+      }
+
+    #section-8 .whats {
+        margin-top: 0px;
+        margin-bottom: 70px;
+      }
 
 }
 
