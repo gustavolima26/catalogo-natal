@@ -80,6 +80,14 @@
     footer #subtitulo {
         margin-bottom: 10px;
     }
+
+    .section-7-container {
+        padding: 0;
+    }
+
+    .section-9-container {
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 656px) and (max-width:890px) {
