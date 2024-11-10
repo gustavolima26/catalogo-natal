@@ -68,6 +68,14 @@
         display: none;
     }
 
+    .section-7-container {
+        padding: 0;
+    }
+
+    .section-9-container {
+        padding: 0;
+    }
+
     footer {
         background-image: none;
         padding: 20px;
@@ -81,13 +89,6 @@
         margin-bottom: 10px;
     }
 
-    .section-7-container {
-        padding: 0;
-    }
-
-    .section-9-container {
-        padding: 0;
-    }
 }
 
 @media screen and (min-width: 656px) and (max-width:890px) {
@@ -180,7 +181,7 @@
       }
 
     #section-8 .whats {
-        margin-top: 0px;
+        margin-top: 80px;
         margin-bottom: 70px;
       }
 

@@ -684,9 +684,9 @@ section p {
   margin-bottom: 200px;
 }
 
-.section-8-container > .background-divs {
+/* .section-8-container > .background-divs {
   margin-bottom: 220px !important;
-}
+} */
 
 #section-8 {
   background: white url(../imagens/background-section-2.jpg) no-repeat center center;
@@ -720,15 +720,15 @@ section p {
 }
 
 #section-8-img1 > div p {
-  display: inline-block;
+  display: block;
   text-align: center;
-  line-height: 55px;
+  line-height: 30px;
   margin: auto;
   padding-left: 5px;
 }
 
 #section-8-img1 > div #valor {
-  font-size: 3em;
+  margin-top: 20px;
 }
 
 .section-8-conteiner-filho {
@@ -736,7 +736,7 @@ section p {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 
 .section-8-conteiner-neto {
@@ -817,12 +817,12 @@ section p {
 }
 
 #section-9-img6 {
-  background: white url(../imagens/imagens-catalogo/mimos/img.jpg) no-repeat bottom center;
+  background: white url(../imagens/imagens-catalogo/mimos/img6.jpg) no-repeat bottom center;
   background-size: cover;
 }
 
 #section-9-img7 {
-  background: white url(../imagens/imagens-catalogo/mimos/img.jpg) no-repeat bottom center;
+  background: white url(../imagens/imagens-catalogo/mimos/img7.jpg) no-repeat bottom center;
   background-size: cover;
 }
 
