@@ -293,7 +293,7 @@ section p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.800);
+  background-color: rgba(255, 255, 255, 0.650);
 }
 
 #section-2::before, #section-4::before, #section-6::before, #section-8::before, #section-9::before {
@@ -303,7 +303,7 @@ section p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.100);
+  background-color: rgba(255, 255, 255, 0.250);
 }
 
 #section-1,/* #section-3, #section-5, #section-7*/ * {
@@ -382,17 +382,17 @@ section p {
 
 #section-2 h2 {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-2 #valor {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 .section-2-conteudo > p {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 .section-2-conteudo-filho {
@@ -461,17 +461,17 @@ section p {
   padding: 0;
   max-width: 450px;
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-4 h2 {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-4 #valor {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 .section-4-container > #section-4-img {
@@ -622,17 +622,17 @@ section p {
   padding: 0;
   max-width: 450px;
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-6 h2 {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-6 #valor {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-6 .whats {
@@ -768,17 +768,17 @@ section p {
   padding: 0;
   max-width: 450px;
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-8 h2 {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-8 #valor {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-8 .whats {
@@ -842,17 +842,17 @@ section p {
   padding: 0;
   max-width: 450px;
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-9 h2 {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
 }
 
 #section-9 #valor {
   color: white;
-  text-shadow: 0px 0px 10px black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.550);
   font-size: 4em;
 }
 
